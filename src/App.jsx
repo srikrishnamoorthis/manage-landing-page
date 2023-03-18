@@ -1,16 +1,27 @@
+import { useState } from 'react';
+import classnames from 'classnames';
 import logo from './assets/logo.svg';
 import illustrationIntro from './assets/illustration-intro.svg';
 import MenuIcon from './assets/icon-hamburger.svg';
 
 function App() {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    }
+
     return (
         <div className="font-be-vietnam lg:max-w-[1024px] bg-light-gray mx-auto">
             <header className='mx-8 my-12 md:mx-16 md:mt-12 flex justify-between items-center'>
                 <img src={logo} />
-                <img src={MenuIcon} className='md:hidden'/>
-                <ul className='flex flex-col absolute inset-0 mt-32 mx-8 p-16 h-max bg-white gap-8 text-dark-blue-600 
-                    text-sm text-center md:relative md:flex-row md:bg-transparent md:mt-0'
-                    data-visible='false'>
+                <img src={MenuIcon} className='md:hidden' onClick={toggleMenu} />
+                <ul id='nav-menu'
+                    className={classnames(`flex-col absolute inset-0 mt-32 mx-8 p-16 h-max bg-white gap-8 text-dark-blue-600 \
+                    text-sm text-center md:relative md:flex md:flex-row md:bg-transparent md:mt-0`, {
+                        'hidden': !isOpen,
+                        'flex': isOpen
+                    })}
+                >
                     <li className='flex-shrink-0'><a href='#'>Pricing</a></li>
                     <li className='flex-shrink-0'><a href='#'>Product</a></li>
                     <li className='flex-shrink-0'><a href='#'>About us</a></li>
@@ -21,7 +32,6 @@ function App() {
                     Get Started
                 </button>
             </header>
-            {/* <section className='md:px-32 md:py-12 md:grid md:grid-flow-col md:grid-cols-2 md:gap-12'> */}
             <section className='mx-8 my-12 md:mx-16 md:mt-12 md:flex flex-row-reverse gap-12 justify-between'>
                 <div className='basis-0 flex-grow'>
                     <img src={illustrationIntro} alt="" />
