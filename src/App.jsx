@@ -6,7 +6,7 @@ import Footer from './footer';
 
 function App() {
     return (
-        <div className="font-be-vietnam lg:max-w-[1024px] bg-light-gray mx-auto">
+        <div className="font-be-vietnam bg-light-gray">
             <Header />
             <main>
                 <Introduction />

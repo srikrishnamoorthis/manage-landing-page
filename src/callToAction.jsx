@@ -2,11 +2,15 @@ import React from 'react';
 
 export default function CallToAction(props) {
     return (
-        <section className='flex h-40 mt-32 bg-bright-red text-white items-center justify-between'>
-            <div className='text-4xl md:px-32 md:py-12 font-semibold'>
-                Simplify how your team works today.
+        <section className='mt-32 bg-bright-red text-white'>
+            <div className='flex flex-col px-8 md:px-12 py-20 gap-12 items-center md:flex-row lg:max-w-[1280px] lg:mx-auto'>
+                <div className='basis-0 flex-grow text-4xl font-semibold text-center md:text-left'>
+                    Simplify how your team works today.
+                </div>
+                <div className='basis-0 flex-grow flex'>
+                    <button className='h-10 w-32 ml-auto sm:mr-10 md:mr-16 text-bright-red bg-white rounded-3xl flex-shrink-0'>Get Started</button>
+                </div>
             </div>
-            <button className='h-10 w-32 sm:mx-10 md:mx-16 md:my-12 text-bright-red bg-white rounded-3xl flex-shrink-0'>Get Started</button>
         </section>
     )
 };

@@ -10,12 +10,12 @@ export default function Header() {
     }
     
     return (
-        <header className='mx-8 my-12 md:mx-16 md:mt-12'>
+        <header className='mx-8 my-12 md:mx-16 md:mt-16 md:mb-32 lg:max-w-[1280px] lg:mx-auto lg:px-16'>
             <nav className='flex justify-between items-center'>
                 <img src={logo} />
                 <img src={MenuIcon} className='md:hidden' onClick={toggleMenu} />
                 <ul id='nav-menu'
-                    className={classnames(`flex-col absolute inset-0 mt-32 mx-8 p-16 h-max bg-white gap-8 text-dark-blue-600 \
+                    className={classnames(`flex-col absolute inset-0 mt-32 mx-8 h-max bg-white gap-8 text-dark-blue-600 \
                     text-sm text-center md:relative md:flex md:flex-row md:bg-transparent md:mt-0`, {
                         'hidden': !isOpen,
                         'flex': isOpen
@@ -27,7 +27,7 @@ export default function Header() {
                     <li className='flex-shrink-0'><a href='#'>Careers</a></li>
                     <li className='flex-shrink-0'><a href='#'>Community</a></li>
                 </ul>
-                <button className='h-10 w-32 p-2 bg-bright-red rounded-3xl text-white hidden md:block'>
+                <button className='h-10 w-32 p-2 bg-bright-red rounded-3xl text-white hidden md:block flex-shrink-0'>
                     Get Started
                 </button>
             </nav>

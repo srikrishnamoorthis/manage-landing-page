@@ -3,7 +3,7 @@ import illustrationIntro from './assets/illustration-intro.svg';
 export default function Introduction() {
     return (
         <>
-            <section className='mx-8 my-12 md:mx-16 md:mt-12 md:flex flex-row-reverse gap-12 justify-between'>
+            <section className='mx-8 my-12 md:mx-16 md:mt-12 md:flex flex-row-reverse gap-12 justify-between lg:max-w-[1280px] lg:mx-auto lg:px-16'>
                 <div className='basis-0 flex-grow'>
                     <img src={illustrationIntro} alt="" />
                 </div>
@@ -18,7 +18,7 @@ export default function Introduction() {
                 </div>
             </section>
 
-            <section className='mx-8 my-12 md:mx-16 md:mt-12 md:flex flex-wrap gap-12'>
+            <section className='mx-8 my-12 md:mx-16 md:mt-12 md:flex flex-wrap gap-12 lg:max-w-[1280px] lg:mx-auto lg:px-16'>
                 <div className='basis-0 flex-grow text-center md:text-left'>
                     <h2 className='text-4xl font-semibold text-dark-blue-600'>What's different about Manage?</h2>
                     <p className='text-grayish-blue mt-8 md:w-[65%]'>
