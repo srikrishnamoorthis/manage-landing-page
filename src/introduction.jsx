@@ -1,14 +1,14 @@
 import illustrationIntro from './assets/illustration-intro.svg';
-import tabletPattern from './assets/bg-tablet-pattern.svg';
 
 export default function Introduction() {
     return (
         <>
             <section className='mx-8 mt-12 md:mx-16 md:mt-12 md:flex flex-row-reverse gap-12 justify-between lg:max-w-[1280px] lg:mx-auto lg:px-16'>
                 <div className='basis-0 flex-grow z-[1]'>
+                    <span className='absolute inset-0 md:w-1/2 md:ml-[50%] bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-[100px_-350px] md:bg-[-0px_-180px] lg:bg-[50px_-100px] z-[0]' />
                     <img src={illustrationIntro} alt="" className='z-[1] relative mx-auto'/>
                 </div>
-                <div className='basis-0 flex-grow mt-8 md:mt-0 md:block text-center md:text-left z-[1]'>
+                <div className='basis-0 flex-grow mt-8 md:mt-0 md:block text-center md:text-left z-[1] relative'>
                     <h1 className='text-5xl font-semibold text-dark-blue-600 leading-tight'>
                         Bring everyone together to build better products.
                     </h1>
@@ -20,7 +20,7 @@ export default function Introduction() {
             </section>
 
             <section className='mx-8 mb-16 mt-24 md:mx-16 md:mt-16 md:flex flex-wrap gap-12 lg:max-w-[1280px] lg:mx-auto lg:px-16 leading-normal'>
-                <div className='basis-0 flex-grow text-center md:text-left'>
+                <div className='basis-0 flex-grow text-center md:text-left z-[1]'>
                     <h2 className='text-4xl font-semibold text-dark-blue-600'>What's different about Manage?</h2>
                     <p className='text-base text-grayish-blue mt-8 md:w-[65%]'>
                         Manage provides all the functionality your team needs, without the complexity. Our software is tailor made

@@ -15,14 +15,14 @@ export default function Header() {
             <nav className='flex justify-between items-center'>
                 <img src={logo} />
                 <img src={menuIcon} 
-                    className={classnames('md:hidden', {
+                    className={classnames('z-[1] md:hidden', {
                         'hidden': isOpen,
                         'inline-block': !isOpen
                     })}
                     onClick={openMenu} 
                 />
                 <img src={closeIcon}
-                    className={classnames('md:hidden', {
+                    className={classnames('z-[1] md:hidden', {
                         'hidden': !isOpen,
                         'inline-block': isOpen
                     })}
