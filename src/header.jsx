@@ -29,7 +29,7 @@ export default function Header() {
                     onClick={closeMenu}
                 />
                 <ul id='nav-menu'
-                    className={classnames(` z-20 flex-col absolute inset-0 mt-16 mx-8 h-max bg-white gap-8 text-dark-blue-600 \
+                    className={classnames(`z-20 flex-col absolute inset-0 mt-16 mx-8 h-max bg-white gap-8 text-dark-blue-600 \
                     text-sm text-center md:relative md:flex md:flex-row md:bg-transparent md:mt-0 \
                     `, {
                         'hidden': !isOpen,
@@ -42,7 +42,7 @@ export default function Header() {
                     <li className='flex-shrink-0'><a href='#'>Careers</a></li>
                     <li className='flex-shrink-0'><a href='#'>Community</a></li>
                 </ul>
-                <button className='h-10 w-32 p-2 bg-bright-red rounded-3xl text-white hidden md:block flex-shrink-0'>
+                <button className='px-8 py-4 text-white bg-bright-red rounded-[100vw] shadow-[0_5px_20px_#F25F3A] hidden md:block flex-shrink-0 z-[2] relative'>
                     Get Started
                 </button>
                 <span className={classnames('md:hidden absolute cursor-default inset-0 top-[25px] h-[260vmax] bg-gradient-to-b from-transparent to-black', { 'hidden': !isOpen, 'block': isOpen })} />
